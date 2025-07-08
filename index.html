@@ -19,6 +19,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
+            line-height: 1.6;
         }
         
         .navbar {
@@ -49,17 +50,21 @@
         .hero h1 {
             font-weight: 700;
             color: var(--secondary-color);
+            margin-bottom: 20px;
         }
         
         .hero p {
             font-size: 1.2rem;
             color: #555;
+            max-width: 700px;
+            margin: 0 auto 30px;
         }
         
         .section-title {
             position: relative;
             margin-bottom: 30px;
             color: var(--secondary-color);
+            font-weight: 600;
         }
         
         .section-title:after {
@@ -78,10 +83,15 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: transform 0.3s;
             margin-bottom: 20px;
+            height: 100%;
         }
         
         .card:hover {
             transform: translateY(-5px);
+        }
+        
+        .card-body {
+            padding: 30px;
         }
         
         .skill-badge {
@@ -92,23 +102,6 @@
             border-radius: 20px;
             margin: 5px;
             font-size: 0.9rem;
-        }
-        
-        footer {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 30px 0;
-        }
-        
-        .social-icon {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-        
-        .social-icon:hover {
-            color: var(--primary-color);
         }
         
         .timeline {
@@ -141,6 +134,30 @@
             border-radius: 50%;
             background-color: var(--primary-color);
             border: 2px solid white;
+        }
+        
+        .tech-stack {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 15px;
+        }
+        
+        .tech-stack strong {
+            color: var(--secondary-color);
+        }
+        
+        .contact-info {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .contact-info li {
+            margin-bottom: 15px;
+        }
+        
+        .contact-info i {
+            width: 25px;
+            color: var(--primary-color);
         }
     </style>
 </head>
@@ -179,7 +196,6 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <img src="profile7261.jpg" alt="Profile Picture" class="rounded-circle mb-4" style="width: 150px; height: 150px;">
                     <h1>Shanmukha Akhil Cherukuri</h1>
                     <p class="lead">Full Stack Developer | Java | Spring Boot | React | Angular | AWS</p>
                     <div class="mt-4">
@@ -204,12 +220,12 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Personal Information</h5>
-                            <ul class="list-unstyled">
-                                <li><strong>Name:</strong> Shanmukha Akhil Cherukuri</li>
-                                <li><strong>Email:</strong> shanmukhcherukuri10@gmail.com</li>
-                                <li><strong>Phone:</strong> +1 (605) 952-0772</li>
-                                <li><strong>Education:</strong> Master's in Computer Science - Florida Atlantic University (GPA: 3.7/4)</li>
-                                <li><strong>Certifications:</strong> AWS Certified Solutions Architect Associate, Front-End Web Development (Coursera)</li>
+                            <ul class="contact-info">
+                                <li><i class="fas fa-user"></i> <strong>Name:</strong> Shanmukha Akhil Cherukuri</li>
+                                <li><i class="fas fa-envelope"></i> <strong>Email:</strong> shanmukhcherukuri10@gmail.com</li>
+                                <li><i class="fas fa-phone"></i> <strong>Phone:</strong> +1 (605) 952-0772</li>
+                                <li><i class="fas fa-graduation-cap"></i> <strong>Education:</strong> Master's in Computer Science - Florida Atlantic University</li>
+                                <li><i class="fas fa-certificate"></i> <strong>Certifications:</strong> AWS Certified Solutions Architect Associate</li>
                             </ul>
                         </div>
                     </div>
@@ -322,23 +338,23 @@
             <div class="row">
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/600x400?text=DevOps+Governance+Portal" class="card-img-top" alt="DevOps Governance Portal">
                         <div class="card-body">
                             <h5 class="card-title">DevOps Governance Portal</h5>
-                            <p class="card-text">A secure, scalable DevOps intelligence platform for large enterprises to monitor, govern, and optimize software delivery pipelines running on GitLab. Enabled engineering leads, compliance teams, and DevSecOps managers to view role-specific dashboards featuring project trends, build health, policy violations, and compliance scores across thousands of microservices and repositories.</p>
-                            <p><strong>Technologies:</strong> Angular 15, Microfrontend architecture, Bootstrap, Angular Material, Spring MVC, Spring Security, OAuth2, JWT, RabbitMQ, Cassandra, GitLab CI/CD, Docker, Azure AKS, Ansible</p>
-                            <a href="#" class="btn btn-outline-primary">View Details</a>
+                            <p class="card-text">A secure, scalable DevOps intelligence platform for large enterprises to monitor, govern, and optimize software delivery pipelines running on GitLab. Enabled role-specific dashboards featuring project trends, build health, and compliance scores.</p>
+                            <div class="tech-stack">
+                                <strong>Tech Stack:</strong> Angular 15, Microfrontend, Spring Boot, Cassandra, RabbitMQ, Azure AKS
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/600x400?text=B2B+E-Commerce+Platform" class="card-img-top" alt="B2B E-Commerce Platform">
                         <div class="card-body">
-                            <h5 class="card-title">B2B E-Commerce Microservices Platform</h5>
-                            <p class="card-text">Full-stack platform tailored to institutional buyers of corporate uniforms, allowing clients to browse catalogs, submit purchase requests in bulk, track order status, and manage inventory reordering cycles. Supported real-time inventory updates and vendor-side product management.</p>
-                            <p><strong>Technologies:</strong> React, Redux, React.memo, useCallback, Bootstrap 5, SCSS, Spring Boot, Swagger/OpenAPI, OAuth2, JWT, Kafka, MongoDB, Jenkins, Amazon EKS, Amazon S3, Helm</p>
-                            <a href="#" class="btn btn-outline-primary">View Details</a>
+                            <h5 class="card-title">B2B E-Commerce Platform</h5>
+                            <p class="card-text">Full-stack platform for institutional buyers of corporate uniforms, featuring bulk ordering, inventory management, and real-time updates.</p>
+                            <div class="tech-stack">
+                                <strong>Tech Stack:</strong> React, Redux, Spring Boot, Kafka, MongoDB, AWS EKS
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -346,23 +362,23 @@
             <div class="row">
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/600x400?text=Workforce+Management+System" class="card-img-top" alt="Workforce Management System">
                         <div class="card-body">
-                            <h5 class="card-title">Smart Workforce Management System</h5>
-                            <p class="card-text">System for managing employees including their onboarding, attendance, payroll, and leave tracking. Simplified HR tasks and improved transparency for employees, resulting in smoother internal operations and better employee engagement through a centralized platform.</p>
-                            <p><strong>Technologies:</strong> React.js, Redux, React Router, Bootstrap, Material-UI, Spring Boot, Spring Security, JWT, Apache Kafka, MongoDB, GraphQL, Jenkins, Docker, AWS EC2, AWS S3, Selenium</p>
-                            <a href="#" class="btn btn-outline-primary">View Details</a>
+                            <h5 class="card-title">Workforce Management System</h5>
+                            <p class="card-text">Enterprise HR solution handling employee lifecycle, attendance, payroll, and leave workflows with role-based access.</p>
+                            <div class="tech-stack">
+                                <strong>Tech Stack:</strong> React.js, Spring Boot, Kafka, MongoDB, AWS
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/600x400?text=FinTech+Loan+Platform" class="card-img-top" alt="FinTech Loan Platform">
                         <div class="card-body">
-                            <h5 class="card-title">FinTech Loan Origination Platform</h5>
-                            <p class="card-text">System to streamline the loan process from applying and verifying identity to credit scoring and compliance. Made loan approvals faster and more secure for both users and financial institutions, resulting in a more efficient lending process that met strict financial regulations.</p>
-                            <p><strong>Technologies:</strong> Angular 14, Spring Boot, RabbitMQ, Oracle DB, PL/SQL, Azure Blob Storage, Jenkins, Docker, Ansible, Azure VMs, JUnit, Cucumber</p>
-                            <a href="#" class="btn btn-outline-primary">View Details</a>
+                            <h5 class="card-title">FinTech Loan Platform</h5>
+                            <p class="card-text">Secure loan management system supporting customer onboarding, KYC verification, and compliance workflows.</p>
+                            <div class="tech-stack">
+                                <strong>Tech Stack:</strong> Angular 14, Spring Boot, RabbitMQ, Oracle DB, Azure
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -379,72 +395,41 @@
                     <h5>Senior Software Developer</h5>
                     <p class="text-muted">GitLab, San Francisco, CA | Jan 2024 - Present</p>
                     <ul>
-                        <li>Developed Angular 15 SPA using Microfrontend architecture and lazy-loaded Angular modules for independent team development and deployment</li>
-                        <li>Built role-specific dashboards with Bootstrap and Angular Material, offering real-time GitLab CI/CD trend visualizations</li>
-                        <li>Optimized change detection using OnPush strategy and RxJS operators, minimizing re-rendering and improving frontend performance</li>
-                        <li>Developed modular Spring MVC services for pipeline audits, metrics ingestion, and repository access history using RESTful design principles</li>
-                        <li>Secured backend using Spring Security with OAuth2 and JWT token chaining for SSO across GitLab accounts</li>
-                        <li>Integrated RabbitMQ queues to asynchronously ingest GitLab webhook data and trigger downstream analysis workflows</li>
-                        <li>Designed internal metrics APIs with versioning and backward compatibility for long-term analytics</li>
-                        <li>Employed Cassandra as a time-series database for storing pipeline job durations and test coverage history</li>
-                        <li>Configured GitLab CI/CD with Docker image versioning, automatic rollbacks, and cache layers for efficient Angular builds</li>
-                        <li>Worked on Ansible for provisioning and Azure AKS for container orchestration</li>
+                        <li>Built Angular 15 SPA with Microfrontend architecture for independent team development</li>
+                        <li>Developed role-specific dashboards with real-time GitLab CI/CD trend visualizations</li>
+                        <li>Optimized frontend performance using OnPush strategy and RxJS operators</li>
+                        <li>Secured backend with Spring Security, OAuth2 and JWT token chaining</li>
+                        <li>Implemented RabbitMQ for asynchronous GitLab webhook data ingestion</li>
                     </ul>
                 </div>
                 <div class="timeline-item">
                     <h5>Software Developer</h5>
                     <p class="text-muted">JAuniforms, Miami, FL | Oct 2021 - Dec 2023</p>
                     <ul>
-                        <li>Designed performant React frontend using Redux for centralized state management, React.memo and useCallback to avoid unnecessary renders</li>
-                        <li>Integrated role-specific dashboards for clients and staff using React Router and protected routes with session tokens</li>
-                        <li>Implemented cart syncing logic across sessions and devices using local storage and background sync with Redux middleware</li>
-                        <li>Styled components using Bootstrap 5 and SCSS for responsive, mobile-friendly UI with accessibility compliance (WCAG 2.1)</li>
-                        <li>Created event-driven microservices using Spring Boot, including catalog, checkout, inventory, and payment services</li>
-                        <li>Managed API contracts using Swagger/OpenAPI and enforced validation with Hibernate Validator</li>
-                        <li>Applied Spring Security with OAuth2 and JWT chaining for secure, stateless service-to-service interactions</li>
-                        <li>Applied Kafka for inventory stock updates, order placement events, and shipping notifications across services</li>
-                        <li>Managed MongoDB as the primary NoSQL datastore for dynamic document structures for product specifications</li>
-                        <li>Designed Jenkins pipelines with scripted and declarative stages for unit testing, Docker image creation, and security scans</li>
-                        <li>Deployed microservices using Amazon EKS with autoscaling and self-healing pods for high availability</li>
+                        <li>Developed React frontend with Redux state management and optimized rendering</li>
+                        <li>Created event-driven microservices for catalog, checkout, and inventory management</li>
+                        <li>Implemented Kafka for real-time inventory updates and order notifications</li>
+                        <li>Designed Jenkins pipelines for CI/CD with Docker and Kubernetes deployments</li>
                     </ul>
                 </div>
                 <div class="timeline-item">
                     <h5>Software Developer</h5>
                     <p class="text-muted">Desert Financial Credit Union, Phoenix, AZ | Dec 2019 - Sep 2021</p>
                     <ul>
-                        <li>Architected a modular React.js SPA using Redux and React Router for seamless navigation and real-time state updates</li>
-                        <li>Implemented role-based access at the UI level with dynamic component rendering for HR managers and employees</li>
-                        <li>Integrated form validation, event-driven UI feedback, and error boundaries to enhance user experience</li>
-                        <li>Applied Bootstrap and Material-UI to create a responsive and consistent design system</li>
-                        <li>Developed Spring Boot microservices for payroll computation, attendance tracking, and leave management</li>
-                        <li>Introduced Spring Security and JWT-based stateless authentication for scalable multi-tenant access</li>
-                        <li>Orchestrated asynchronous operations via Apache Kafka topics for payroll report generation</li>
-                        <li>Designed internal APIs with GraphQL documentation supporting cross-team integrations and mobile clients</li>
-                        <li>Modeled unstructured employee metadata in MongoDB enabling flexible document-based queries</li>
-                        <li>Designed CI/CD pipeline in Jenkins with integration tests, SonarQube analysis, and Docker image deployment</li>
+                        <li>Architected React.js SPA with Redux for HR management system</li>
+                        <li>Implemented role-based access control and dynamic UI components</li>
+                        <li>Developed Spring Boot microservices for payroll and attendance tracking</li>
+                        <li>Used Apache Kafka for asynchronous payroll report generation</li>
                     </ul>
                 </div>
                 <div class="timeline-item">
                     <h5>Junior Software Engineer</h5>
                     <p class="text-muted">WSFS Bank, Wilmington, DE | June 2018 – Dec 2019</p>
                     <ul>
-                        <li>Developed an Angular 14 SPA for a fintech loan origination platform with reactive forms and observables.</li>
-                        <li>Integrated multi-step loan application wizards with validation, file uploads, and progress indicators.</li>
-                        <li>Built Spring Boot microservices for credit scoring, KYC, audit trails, and loan tracking.</li>
-                        <li>Implemented RabbitMQ queues for asynchronous credit scoring and document verification workflows.</li>
-                        <li>Used Oracle DB with PL/SQL for secure, ACID-compliant applicant data transactions.</li>
-                        <li>Configured Jenkins CI/CD with Docker, deployed on Azure VMs automated via Ansible playbooks.</li>  
-                    </ul>
-                </div>
-                <div class="timeline-item">
-                    <h5>Software Engineer Intern</h5>
-                    <p class="text-muted">Evoke Technologies, Hyderabad, IN | June 2017 – May 2018</p>
-                    <ul>
-                        <li>Built a collaborative code-sharing platform with React.js frontend and WebSocket-based live session sync.</li>
-                        <li>Developed Spring Boot APIs for real-time session control, chat logging, and code snapshot storage.</li>
-                        <li>Used Apache Kafka to manage real-time typing events and session collaboration across users.</li>
-                        <li>Stored session data in Cassandra, used Redis for active session caching and recovery.</li>
-                        <li>Deployed Dockerized services to AWS EC2, used S3 for exporting/downloading code files.</li>
+                        <li>Built Angular 14 SPA for loan origination with reactive forms</li>
+                        <li>Developed Spring Boot microservices for KYC and credit scoring</li>
+                        <li>Implemented RabbitMQ for asynchronous document verification</li>
+                        <li>Configured Jenkins CI/CD pipeline with Docker and Ansible</li>
                     </ul>
                 </div>
             </div>
@@ -454,57 +439,31 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="row">
-                <div class="col-lg-6">
+            <h2 class="section-title">Contact</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Contact Information</h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-3"><i class="fas fa-envelope me-2"></i> shanmukhcherukuri10@gmail.com</li>
-                                <li class="mb-3"><i class="fas fa-phone me-2"></i> +1 (605) 952-0772</li>
-                                <li class="mb-3"><i class="fas fa-map-marker-alt me-2"></i> Florida, USA</li>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Get In Touch</h5>
+                            <ul class="contact-info">
+                                <li><i class="fas fa-envelope"></i> shanmukhcherukuri10@gmail.com</li>
+                                <li><i class="fas fa-phone"></i> +1 (605) 952-0772</li>
+                                <li><i class="fas fa-map-marker-alt"></i> Florida, USA</li>
                             </ul>
                             <div class="mt-4">
-                                <a href="https://github.com/ShanmukhaAkhilCherukuri" class="social-icon"><i class="fab fa-github"></i></a>
-                                <a href="https://www.linkedin.com/in/shanmukha-akhil-cherukuri-622719373/" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="social-icon"><i class="fab fa-stack-overflow"></i></a>
+                                <a href="https://github.com/ShanmukhaAkhilCherukuri" class="btn btn-outline-dark btn-lg me-2">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                                <a href="https://www.linkedin.com/in/shanmukha-akhil-cherukuri-622719373/" class="btn btn-outline-primary btn-lg">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" class="form-control" id="subject" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="container">
-            <p>&copy; 2023 Shanmukha Akhil Cherukuri. All rights reserved.</p>
-        </div>
-    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
